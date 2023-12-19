@@ -33,6 +33,7 @@ def main():
     spatial_transform = get_spatial_transform(opt, 'train')
     temporal_transform = TSN(seq_len=opt.seq_len, snippet_duration=opt.snippet_duration, center=False)
     target_tranform = ClassLabel()
+    # one possibility to add features
     training_data = get_training_set(opt, spatial_transform, temporal_transform, target_tranform)
     train_loader = get_data_loader(opt, training_data, shuffle=True)
 

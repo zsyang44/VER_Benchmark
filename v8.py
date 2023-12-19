@@ -85,7 +85,7 @@ def preprocess_audio(audio_path):
     mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=32)
     return mfccs
 
-
+# Adding the handcrafted features
 class VE8Dataset(data.Dataset):
     def __init__(self,
                  video_path,
